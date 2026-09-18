@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniRDP Client — ZAF Theory</title>
+  <meta name="description" content="Fast, lightweight, tabbed Remote Desktop client for Windows with per-session keep-alive and mixed-DPI support.">
+  <meta name="theme-color" content="#178a55">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-page {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+      margin-bottom: 16px;
+    }
+    .back-link:hover {
+      color: var(--emerald);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--emerald-tint);
+      color: var(--emerald-dark);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .features li {
+      padding-left: 24px;
+      position: relative;
+    }
+    .features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--emerald);
+      font-weight: bold;
+    }
+    .download-box {
+      background: var(--emerald-tint);
+      border: 1px solid #d3e8dc;
+      padding: 24px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .download-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .notice {
+      background: #fafafa;
+      border-left: 3px solid var(--text-muted);
+      padding: 14px 18px;
+      font-size: 14px;
+      color: var(--text-muted);
+      border-radius: 0 6px 6px 0;
+    }
+    .notice strong {
+      color: var(--text);
+    }
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid #e5e5e5;
+      padding-top: 16px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <aside class="brand">
+    <a href="/" style="text-decoration:none; color:inherit; display:flex; flex-direction:column; align-items:center;">
+      <svg class="brand-mark" viewBox="0 0 530 488" aria-hidden="true">
+        <polygon fill="#0b3d26" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+        <polygon fill="#ffffff" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
+      </svg>
+      <h1 class="brand-name">ZAF THEORY</h1>
+      <p class="brand-tagline">Indie apps</p>
+    </a>
+  </aside>
+
+  <main class="product-page">
+    <header>
+      <a href="/" class="back-link">&larr; Back to all apps</a>
+      <div><span class="badge">Windows Utility • <span id="minirdp-version">v1.3.0</span></span></div>
+      <h2 class="lead" style="font-size: 32px; margin-bottom: 8px;">MiniRDP Client</h2>
+      <p class="note" style="margin: 0;">A clean, high-performance tabbed Remote Desktop client for power users.</p>
+    </header>
+
+    <section>
+      <h3 class="caption">Why MiniRDP</h3>
+      <p>Standard Remote Desktop windows get messy fast when you manage multiple lab or server environments. MiniRDP packages sessions into a clean, modern tabbed interface with zero bloat.</p>
+
+      <ul class="features">
+        <li><strong>Tabbed Sessions & Multi-Window:</strong> Run multiple remote connections side-by-side or drag across displays without recreating controls.</li>
+        <li><strong>Per-Monitor V2 Mixed DPI:</strong> Crisp rendering and correctly scaled menus whether you're docked, on 4K, or mixing high-DPI displays.</li>
+        <li><strong>Smart Per-Tab Anti-Idle:</strong> Configurable, non-intrusive keep-alive that works even when tabs are backgrounded or hidden in the system tray.</li>
+        <li><strong>Quick Switcher (Ctrl+K):</strong> Instantly search and jump across active sessions and saved profiles by name, account, or IP.</li>
+        <li><strong>DPAPI Credential Security:</strong> Saved credentials are encrypted using Windows DPAPI tied to your local user account—passwords are never saved in plaintext.</li>
+      </ul>
+    </section>
+
+    <div class="download-box">
+      <div>
+        <a class="btn" href="/downloads/MiniRdpClient.zip" download>Download MiniRDP for Windows</a>
+      </div>
+      <div class="download-meta">
+        Standalone Windows x64 ZIP • No installer required • Includes .NET 10 runtime
+      </div>
+    </div>
+
+    <div class="notice">
+      <strong>First-time launch note:</strong> Because MiniRDP is a free indie release without an enterprise certificate, Windows SmartScreen may show an alert on first open. Simply click <em>"More info"</em> and then <em>"Run anyway"</em>.
+    </div>
+
+    <footer class="disclaimer">
+      <p><strong>Disclaimer & License:</strong> MiniRDP is provided by ZAF Theory LLC "AS IS", without warranty of any kind, express or implied. Use of anti-idle features must comply with your organization’s security policies.</p>
+      <p>&copy; 2026 ZAF Theory LLC. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
