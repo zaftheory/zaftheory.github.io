@@ -1,0 +1,207 @@
+:root {
+  --emerald: #178a55;
+  --emerald-dark: #116b41;
+  --emerald-deep: #0b3d26;
+  --emerald-tint: #f1f8f4;
+  --on-emerald: #ffffff;
+  --on-emerald-muted: #d3f0e0;
+  --bg: #ffffff;
+  --text: #12201a;
+  --text-muted: #5d7267;
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-brand: "Montserrat", var(--font-body);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Brand panel */
+
+.brand {
+  background: var(--emerald);
+  color: var(--on-emerald);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.brand-mark {
+  width: min(220px, 40vw);
+  height: auto;
+}
+
+.brand-name {
+  margin: 24px 0 0;
+  font-family: var(--font-brand);
+  font-weight: 500;
+  font-size: clamp(28px, 3.4vw, 44px);
+  letter-spacing: 0.04em;
+  line-height: 1.05;
+}
+
+.brand-tagline {
+  margin: 12px 0 0;
+  color: var(--on-emerald-muted);
+}
+
+/* Content */
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  padding: 48px clamp(24px, 6vw, 80px);
+  max-width: 640px;
+  width: 100%;
+}
+
+section[hidden] {
+  display: none;
+}
+
+.caption {
+  margin: 0 0 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--emerald);
+}
+
+.lead {
+  margin: 0;
+  font-size: clamp(22px, 2.4vw, 30px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.note {
+  margin: 12px 0 0;
+  color: var(--text-muted);
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  background: var(--emerald-tint);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 2px 0 14px;
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 16px;
+  border: 1px solid var(--emerald);
+  border-radius: 6px;
+  background: var(--emerald);
+  color: var(--on-emerald);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: var(--emerald-dark);
+  border-color: var(--emerald-dark);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--emerald-dark);
+}
+
+.btn-outline:hover {
+  background: var(--emerald);
+  color: var(--on-emerald);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--emerald-deep);
+  outline-offset: 2px;
+}
+
+footer {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: var(--emerald-dark);
+}
+
+/* 404 */
+
+.notfound {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.notfound .btn {
+  margin-top: 28px;
+  background: var(--on-emerald);
+  border-color: var(--on-emerald);
+  color: var(--emerald-dark);
+}
+
+@media (max-width: 720px) {
+  body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto 1fr;
+  }
+
+  .brand {
+    padding: 40px 24px;
+  }
+
+  .brand-mark {
+    width: 120px;
+  }
+
+  .notfound {
+    grid-template-rows: 1fr;
+  }
+
+  main {
+    justify-content: flex-start;
+    padding: 32px 20px;
+    max-width: none;
+  }
+}
