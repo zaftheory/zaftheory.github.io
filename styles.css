@@ -23,6 +23,7 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: start;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
@@ -44,6 +45,8 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
+  max-height: 100vh;
+  align-self: start;
   box-sizing: border-box;
 }
 
@@ -76,6 +79,8 @@ main {
   padding: 48px clamp(24px, 6vw, 80px);
   max-width: 640px;
   width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 section[hidden] {
@@ -174,11 +179,13 @@ footer a {
 
 /* Document & Subpage Layouts */
 
-.page-content {
+.page-content,
+.product-page {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 28px;
+  min-height: 100vh;
 }
 
 
@@ -289,11 +296,14 @@ footer a {
   body {
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto 1fr;
+    align-items: stretch;
   }
 
   .brand {
     position: static;
     height: auto;
+    max-height: none;
+    align-self: auto;
     padding: 40px 24px;
   }
 
@@ -305,9 +315,12 @@ footer a {
     grid-template-rows: 1fr;
   }
 
-  main {
+  main,
+  .page-content,
+  .product-page {
     justify-content: flex-start;
     padding: 32px 20px;
     max-width: none;
+    min-height: auto;
   }
 }
