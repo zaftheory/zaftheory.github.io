@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MiniRDP Client — ZAF Theory</title>
-  <meta name="description" content="Fast, lightweight, tabbed Remote Desktop client for Windows with per-session keep-alive and mixed-DPI support.">
+  <meta name="description" content="Fast, lightweight Remote Desktop client for Mac and Windows with per-session keep-alive and tabbed sessions.">
   <meta name="theme-color" content="#178a55">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,13 +32,20 @@
       color: var(--emerald);
     }
     .badge {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: var(--emerald-tint);
       color: var(--emerald-dark);
       font-size: 13px;
       font-weight: 600;
       padding: 4px 10px;
       border-radius: 4px;
+    }
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
       margin-bottom: 12px;
     }
     .features {
@@ -60,18 +67,42 @@
       color: var(--emerald);
       font-weight: bold;
     }
+    .download-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
     .download-box {
       background: var(--emerald-tint);
       border: 1px solid #d3e8dc;
-      padding: 24px;
+      padding: 20px 24px;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
+    }
+    .download-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .download-platform {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .download-platform svg {
+      color: var(--emerald-dark);
     }
     .download-meta {
       font-size: 13px;
       color: var(--text-muted);
+      line-height: 1.4;
     }
     .notice {
       background: #fafafa;
@@ -106,35 +137,69 @@
   <main class="product-page">
     <header>
       <a href="/" class="back-link">&larr; Back to all apps</a>
-      <div><span class="badge">Windows Utility • <span id="minirdp-version">v1.3.3</span></span></div>
+      <div class="badges-row">
+        <span class="badge">
+          <svg width="13" height="13" viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.85-12-14.43-6.53-9.98-11.75-21.28-15.66-33.89-3.92-12.61-5.88-24.89-5.88-36.84 0-14.35 3.58-26.31 10.75-35.88 7.17-9.57 16.3-14.47 27.4-14.7 4.89 0 10.43 1.25 16.63 3.76 6.2 2.5 10.23 3.82 12.09 3.96 1.85-.14 6.09-1.52 12.72-4.13 6.64-2.61 12.29-3.76 16.95-3.46 12.61.82 22.84 5.37 30.68 13.66-10.98 6.63-16.35 15.77-16.1 27.42.27 9.13 3.7 16.85 10.29 23.16 6.59 6.31 14.52 10.01 23.8 11.1-2.4 7.29-5.27 14.42-8.62 21.39zm-29.23-112.5c0 7.18-2.61 13.8-7.83 19.86-5.22 6.06-11.76 9.87-19.62 11.43-.87-1.3-1.3-3.04-1.3-5.21 0-7.39 2.72-14.13 8.16-20.22 5.43-6.09 11.96-9.78 19.59-11.08.65 1.74 1 3.48 1 5.22z"/></svg>
+          macOS Menu Bar App • <span id="minirdp-mac-version">v1.0</span>
+        </span>
+        <span class="badge">
+          <svg width="13" height="13" viewBox="0 0 88 88" fill="currentColor" aria-hidden="true"><path d="M0 12.4L35.7 7.5v33.4H0V12.4zm35.7 32.5H0v28.5l35.7-4.9V44.9zM39.6 6.9L88 0v40.9H39.6V6.9zm48.4 38H39.6v34L88 88V44.9z"/></svg>
+          Windows Utility • <span id="minirdp-win-version">v1.3.3</span>
+        </span>
+      </div>
       <h2 class="lead" style="font-size: 32px; margin-bottom: 8px;">MiniRDP Client</h2>
-      <p class="note" style="margin: 0;">A clean, high-performance tabbed Remote Desktop client for power users.</p>
+      <p class="note" style="margin: 0;">A clean, high-performance Remote Desktop client for power users on Mac and Windows.</p>
     </header>
 
     <section>
       <h3 class="caption">Why MiniRDP</h3>
-      <p>Standard Remote Desktop windows get messy fast when you manage multiple lab or server environments. MiniRDP packages sessions into a clean, modern tabbed interface with zero bloat.</p>
+      <p>Standard Remote Desktop windows get messy fast when you manage multiple lab or server environments, and sessions disconnect when you step away. MiniRDP packages connections into clean tabs and keeps sessions alive with smart anti-idle (F15) and zero bloat.</p>
 
       <ul class="features">
-        <li><strong>Tabbed Sessions & Multi-Window:</strong> Run multiple remote connections side-by-side or drag across displays without recreating controls.</li>
-        <li><strong>Per-Monitor V2 Mixed DPI:</strong> Crisp rendering and correctly scaled menus whether you're docked, on 4K, or mixing high-DPI displays.</li>
-        <li><strong>Smart Per-Tab Anti-Idle:</strong> Configurable, non-intrusive keep-alive that works even when tabs are backgrounded or hidden in the system tray.</li>
-        <li><strong>Quick Switcher (Ctrl+K):</strong> Instantly search and jump across active sessions and saved profiles by name, account, or IP.</li>
-        <li><strong>DPAPI Credential Security:</strong> Saved credentials are encrypted using Windows DPAPI tied to your local user account—passwords are never saved in plaintext.</li>
+        <li><strong>Smart Per-Session Keep-Alive:</strong> Automated, non-intrusive F15 pulses that prevent server idle timeouts even when windows are minimized or hidden in the menu bar / system tray.</li>
+        <li><strong>Tabbed Sessions & Multi-Window:</strong> Run multiple remote desktops side-by-side or drag across displays without recreating controls.</li>
+        <li><strong>Seamless Clipboard Sync:</strong> Bidirectional copy-and-paste for text, images, and files between your desktop and remote sessions.</li>
+        <li><strong>Quick Switcher (⌘K on Mac / Ctrl+K on Windows):</strong> Instantly search and jump across active sessions and saved profiles by name, account, or IP.</li>
+        <li><strong>Native & Secure:</strong> Built with native OS technologies (Swift & Apple Keychain on macOS; C# & DPAPI on Windows)—passwords are encrypted and never saved in plaintext.</li>
       </ul>
     </section>
 
-    <div class="download-box">
-      <div>
-        <a id="minirdp-download" class="btn" href="https://github.com/zaftheory/zaftheory.github.io/releases/download/minirdp-latest/MiniRdpClient-1.3.3.zip">Download MiniRDP for Windows</a>
+    <div class="download-grid">
+      <!-- macOS Download Box -->
+      <div class="download-box">
+        <div class="download-header">
+          <div class="download-platform">
+            <svg width="18" height="18" viewBox="0 0 170 170" fill="currentColor" aria-hidden="true"><path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.75 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.35.13-9.16-1.9-14.42-6.08-3.69-3.04-7.69-7.85-12-14.43-6.53-9.98-11.75-21.28-15.66-33.89-3.92-12.61-5.88-24.89-5.88-36.84 0-14.35 3.58-26.31 10.75-35.88 7.17-9.57 16.3-14.47 27.4-14.7 4.89 0 10.43 1.25 16.63 3.76 6.2 2.5 10.23 3.82 12.09 3.96 1.85-.14 6.09-1.52 12.72-4.13 6.64-2.61 12.29-3.76 16.95-3.46 12.61.82 22.84 5.37 30.68 13.66-10.98 6.63-16.35 15.77-16.1 27.42.27 9.13 3.7 16.85 10.29 23.16 6.59 6.31 14.52 10.01 23.8 11.1-2.4 7.29-5.27 14.42-8.62 21.39zm-29.23-112.5c0 7.18-2.61 13.8-7.83 19.86-5.22 6.06-11.76 9.87-19.62 11.43-.87-1.3-1.3-3.04-1.3-5.21 0-7.39 2.72-14.13 8.16-20.22 5.43-6.09 11.96-9.78 19.59-11.08.65 1.74 1 3.48 1 5.22z"/></svg>
+            <span>macOS</span>
+          </div>
+          <div>
+            <a id="minirdp-mac-download" class="btn" href="https://github.com/zaftheory/zaftheory.github.io/releases/download/minirdp-latest/MiniRdp-1.0.dmg">Download for Mac (.dmg)</a>
+          </div>
+        </div>
+        <div class="download-meta">
+          Universal DMG (Apple Silicon & Intel) • Signed with Developer ID & Notarized • macOS 26+
+        </div>
       </div>
-      <div class="download-meta">
-        Standalone Windows x64 ZIP • No installer required • Includes .NET 10 runtime
+
+      <!-- Windows Download Box -->
+      <div class="download-box">
+        <div class="download-header">
+          <div class="download-platform">
+            <svg width="18" height="18" viewBox="0 0 88 88" fill="currentColor" aria-hidden="true"><path d="M0 12.4L35.7 7.5v33.4H0V12.4zm35.7 32.5H0v28.5l35.7-4.9V44.9zM39.6 6.9L88 0v40.9H39.6V6.9zm48.4 38H39.6v34L88 88V44.9z"/></svg>
+            <span>Windows</span>
+          </div>
+          <div>
+            <a id="minirdp-win-download" class="btn" href="https://github.com/zaftheory/zaftheory.github.io/releases/download/minirdp-latest/MiniRdpClient-1.3.3.zip">Download for Windows (.zip)</a>
+          </div>
+        </div>
+        <div class="download-meta">
+          Standalone Windows x64 ZIP • No installer required • Includes .NET 10 runtime
+        </div>
       </div>
     </div>
 
     <div class="notice">
-      <strong>First-time launch note:</strong> Because MiniRDP is a free indie release without an enterprise certificate, Windows SmartScreen may show an alert on first open. Simply click <em>"More info"</em> and then <em>"Run anyway"</em>.
+      <strong>Windows launch note:</strong> Because MiniRDP for Windows is a free indie release without an enterprise certificate, Windows SmartScreen may show an alert on first open. Simply click <em>"More info"</em> and then <em>"Run anyway"</em>.
     </div>
 
     <footer class="disclaimer">
