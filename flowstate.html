@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FlowState — ZAF Theory</title>
   <meta name="description" content="Small macOS menu bar app that graphs CPU, GPU, memory pressure, disk, network, battery, and temperature, and shows whichever is busiest.">
-  <meta name="theme-color" content="#178a55">
+  <meta name="theme-color" content="#246e4c">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +83,7 @@
       object-fit: cover;
       object-position: top;
       border-radius: 8px;
-      border: 1px solid #d3e8dc;
+      border: 1px solid var(--emerald-border, #d2ded7);
     }
     .shots p {
       margin: 8px 0 0;
@@ -106,16 +106,29 @@
     }
     .download-box {
       background: var(--emerald-tint);
-      border: 1px solid #d3e8dc;
-      padding: 24px;
+      border: 1px solid var(--emerald-border, #d2ded7);
+      padding: 20px 24px;
       border-radius: 8px;
       display: flex;
       flex-direction: column;
-      gap: 14px;
+      gap: 12px;
+    }
+    .download-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .download-platform {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
     }
     .download-meta {
       font-size: 13px;
       color: var(--text-muted);
+      line-height: 1.4;
     }
     .notice {
       background: #fafafa;
@@ -143,7 +156,7 @@
 <body>
   <aside class="brand">
     <svg class="brand-mark" viewBox="0 0 530 488" aria-hidden="true">
-      <polygon fill="#0b3d26" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+      <polygon fill="#103524" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
       <polygon fill="#ffffff" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
     </svg>
     <h1 class="brand-name">ZAF THEORY</h1>
@@ -202,8 +215,11 @@
     </section>
 
     <div class="download-box">
-      <div>
-        <a id="flowstate-download" class="btn" href="https://github.com/zaftheory/zaftheory.github.io/releases/download/flowstate-latest/FlowState-1.1.1.zip">Download FlowState for Mac</a>
+      <div class="download-header">
+        <div class="download-platform">macOS</div>
+        <div>
+          <a id="flowstate-download" class="btn" href="https://github.com/zaftheory/zaftheory.github.io/releases/download/flowstate-latest/FlowState-1.1.1.zip">Download for Mac (.zip)</a>
+        </div>
       </div>
       <div class="download-meta">
         macOS 26 or later • Apple silicon • Free • No auto-update: download the latest zip and replace the app, your settings are kept

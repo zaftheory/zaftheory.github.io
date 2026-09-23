@@ -1,13 +1,15 @@
 :root {
-  --emerald: #178a55;
-  --emerald-dark: #116b41;
-  --emerald-deep: #0b3d26;
-  --emerald-tint: #f1f8f4;
+  /* Porsche Oak Green Metallic Neo (Lifted & Sunlit) */
+  --emerald: #246e4c;
+  --emerald-dark: #1b553a;
+  --emerald-deep: #103524;
+  --emerald-tint: #eef6f2;
+  --emerald-border: #c6ded2;
   --on-emerald: #ffffff;
-  --on-emerald-muted: #d3f0e0;
+  --on-emerald-muted: #d8eee3;
   --bg: #ffffff;
-  --text: #12201a;
-  --text-muted: #5d7267;
+  --text: #11221a;
+  --text-muted: #536c60;
   --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-brand: "Montserrat", var(--font-body);
 }
@@ -35,6 +37,7 @@ body {
 
 .brand {
   background: var(--emerald);
+  background: linear-gradient(165deg, #30855e 0%, #246e4c 45%, #184e36 100%);
   color: var(--on-emerald);
   display: flex;
   flex-direction: column;
@@ -218,7 +221,7 @@ footer a {
 
 .action-box {
   background: var(--emerald-tint);
-  border: 1px solid #d3e8dc;
+  border: 1px solid var(--emerald-border, #d2ded7);
   padding: 24px;
   border-radius: 8px;
   display: flex;
