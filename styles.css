@@ -181,13 +181,6 @@ footer a {
   gap: 28px;
 }
 
-.brand a {
-  text-decoration: none;
-  color: inherit;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
 .back-link {
   display: inline-flex;
