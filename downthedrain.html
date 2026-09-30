@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Down the Drain — ZAF Theory</title>
+  <meta name="description" content="Down the Drain: Relax & Rinse. A cozy sink-cleaning game for iPhone and iPad: drag to spray, watch the water flow, and rinse every crumb down the drain.">
+  <meta property="og:title" content="Down the Drain: Relax & Rinse">
+  <meta property="og:description" content="A cozy sink-cleaning game for iPhone and iPad. No timers, no ads. Just spray.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zaftheory.com/downthedrain.html">
+  <meta property="og:image" content="https://zaftheory.com/assets/downthedrain/icon.png">
+  <meta name="theme-color" content="#246e4c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .product-page {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      transition: color 0.15s ease;
+      margin-bottom: 16px;
+    }
+    .back-link:hover {
+      color: var(--emerald);
+    }
+    .title-row {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .app-icon {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      flex: 0 0 auto;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    }
+    .badge {
+      display: inline-block;
+      background: var(--emerald-tint);
+      color: var(--emerald-dark);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .features li {
+      padding-left: 24px;
+      position: relative;
+    }
+    .features li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--emerald);
+      font-weight: bold;
+    }
+    .shots {
+      display: flex;
+      gap: 14px;
+      margin: 0;
+      padding: 4px 0 12px;
+      list-style: none;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+    }
+    .shots li {
+      flex: 0 0 200px;
+      scroll-snap-align: start;
+    }
+    .shots a {
+      display: block;
+    }
+    .shots img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 600 / 1304;
+      border-radius: 14px;
+      border: 1px solid var(--emerald-border);
+      background: #fdf3dc;
+    }
+    .shots p {
+      margin: 8px 0 0;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .download-box {
+      background: var(--emerald-tint);
+      border: 1px solid var(--emerald-border);
+      padding: 20px 24px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .download-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .download-platform {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+    }
+    .download-meta {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .coming-soon {
+      cursor: default;
+    }
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid #e5e5e5;
+      padding-top: 16px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <aside class="brand">
+    <svg class="brand-mark" viewBox="0 0 530 488" aria-hidden="true">
+      <polygon fill="#103524" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+      <polygon fill="#ffffff" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
+    </svg>
+    <h1 class="brand-name">ZAF THEORY</h1>
+    <p class="brand-tagline">Indie apps</p>
+  </aside>
+
+  <main class="product-page">
+    <header>
+      <a href="/" class="back-link">&larr; Back to all apps</a>
+      <div class="badges-row">
+        <span class="badge">iPhone &amp; iPad Game</span>
+        <span class="badge">11 languages</span>
+      </div>
+      <div class="title-row">
+        <img class="app-icon" src="assets/downthedrain/icon.png" alt="Down the Drain app icon" width="88" height="88">
+        <div>
+          <h2 class="lead" style="font-size: 32px; margin-bottom: 8px;">Down the Drain</h2>
+          <p class="note" style="margin: 0;">Relax &amp; Rinse. A cozy sink-cleaning game.</p>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <h3 class="caption">Screenshots</h3>
+      <ul class="shots">
+        <li>
+          <a href="assets/downthedrain/kitchen.jpg"><img src="assets/downthedrain/kitchen.jpg" alt="Spraying the Kitchen sink, water swirling toward the drain" loading="lazy"></a>
+          <p>The Kitchen, after pasta night</p>
+        </li>
+        <li>
+          <a href="assets/downthedrain/granite.jpg"><img src="assets/downthedrain/granite.jpg" alt="Spraying the Granite sink with soap and a stopper on the counter" loading="lazy"></a>
+          <p>Granite, with soap and a stopper</p>
+        </li>
+        <li>
+          <a href="assets/downthedrain/bar-sink.jpg"><img src="assets/downthedrain/bar-sink.jpg" alt="Spraying the round copper Bar sink" loading="lazy"></a>
+          <p>The round Bar sink</p>
+        </li>
+        <li>
+          <a href="assets/downthedrain/choose-a-sink.jpg"><img src="assets/downthedrain/choose-a-sink.jpg" alt="Choose a sink: ten sinks with photos" loading="lazy"></a>
+          <p>Ten sinks, ten kinds of mess</p>
+        </li>
+        <li>
+          <a href="assets/downthedrain/all-clear.jpg"><img src="assets/downthedrain/all-clear.jpg" alt="All clear: every scrap rinsed down the drain" loading="lazy"></a>
+          <p>All clear</p>
+        </li>
+        <li>
+          <a href="assets/downthedrain/home.jpg"><img src="assets/downthedrain/home.jpg" alt="Down the Drain home screen with the next sink up" loading="lazy"></a>
+          <p>Pick a mode and play</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h3 class="caption">About the game</h3>
+      <p>Turn a messy sink into a small moment of calm. Drag to spray, watch the water flow, and guide every crumb, pea and noodle down the drain.</p>
+
+      <ul class="features">
+        <li><strong>Flowing water:</strong> the spray pools, swirls and carries scraps toward the drain.</li>
+        <li><strong>Ten sinks, ten kinds of mess:</strong> from a kitchen after pasta night to a paint studio, an espresso bar and a garden tub.</li>
+        <li><strong>Your water, your way:</strong> Fan or Jet, gentle or strong pressure, hot or cold. Pump some soap, plug the drain to fill the sink, then pull the plug.</li>
+        <li><strong>Three ways to play:</strong> Classic, Challenge with dishes in the way, and Random. Switch on Endless and the mess keeps coming for as long as you like.</li>
+        <li><strong>Made to feel good:</strong> satisfying sounds and gentle vibration made for the game, plus Game Center achievements and Apple Pencil support.</li>
+        <li><strong>No pressure:</strong> no time limits, no score, no ads. Just spray.</li>
+      </ul>
+    </section>
+
+    <div class="download-box">
+      <div class="download-header">
+        <div class="download-platform">iPhone &amp; iPad</div>
+        <div>
+          <!-- Once it's live, swap this for:
+               <a class="btn" href="https://apps.apple.com/app/id6817176068">Download on the App Store</a> -->
+          <span class="btn btn-outline coming-soon" aria-disabled="true">Coming soon to the App Store</span>
+        </div>
+      </div>
+      <div class="download-meta">
+        Free to play the Kitchen, the Bar sink and Granite in Classic • One purchase unlocks the other seven sinks, Challenge, Random and Endless, for good • No ads, no tracking • iOS 17+
+      </div>
+    </div>
+
+    <footer class="disclaimer">
+      <nav class="footer-links" style="margin-bottom: 12px;">
+        <a href="/">Home</a>
+        <span class="sep">&bull;</span>
+        <a href="/privacy.html">Privacy</a>
+        <span class="sep">&bull;</span>
+        <a href="/support.html">Support</a>
+        <span class="sep">&bull;</span>
+        <a href="/terms.html">Terms</a>
+      </nav>
+      <p>Game Center and Apple Pencil are trademarks of Apple Inc. App Store is a service mark of Apple Inc.</p>
+      <p style="margin-top: 6px;">&copy; 2026 ZAF Theory LLC. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
