@@ -7,168 +7,28 @@
   <meta name="description" content="Fast, lightweight Remote Desktop client for Mac and Windows with per-session keep-alive and tabbed sessions.">
   <meta name="theme-color" content="#246e4c">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .product-page {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: color 0.15s ease;
-      margin-bottom: 16px;
-    }
-    .back-link:hover {
-      color: var(--emerald);
-    }
-    .badge {
-      display: inline-block;
-      background: var(--emerald-tint);
-      color: var(--emerald-dark);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 4px;
-    }
-    .badges-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .features {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .features li {
-      padding-left: 24px;
-      position: relative;
-    }
-    .features li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--emerald);
-      font-weight: bold;
-    }
-    .shots {
-      display: flex;
-      gap: 14px;
-      margin: 0;
-      padding: 4px 0 12px;
-      list-style: none;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-    }
-    .shots li {
-      flex: 0 0 380px;
-      scroll-snap-align: start;
-    }
-    .shots a {
-      display: block;
-    }
-    .shots img {
-      display: block;
-      width: 100%;
-      height: 260px;
-      object-fit: contain;
-      background: #ffffff;
-      border-radius: 8px;
-      border: 1px solid var(--emerald-border, #d2ded7);
-    }
-    .shots p {
-      margin: 8px 0 0;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-    .download-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .download-box {
-      background: var(--emerald-tint);
-      border: 1px solid var(--emerald-border, #d2ded7);
-      padding: 20px 24px;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .download-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .download-platform {
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .download-meta {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-    .notice {
-      background: #fafafa;
-      border-left: 3px solid var(--text-muted);
-      padding: 14px 18px;
-      font-size: 14px;
-      color: var(--text-muted);
-      border-radius: 0 6px 6px 0;
-    }
-    .notice strong {
-      color: var(--text);
-    }
-    .disclaimer {
-      font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px solid #e5e5e5;
-      padding-top: 16px;
-      line-height: 1.6;
-    }
-  </style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <aside class="brand">
-    <svg class="brand-mark" viewBox="0 0 530 488" aria-hidden="true">
-      <polygon fill="#103524" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
-      <polygon fill="#ffffff" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
-    </svg>
-    <h1 class="brand-name">ZAF THEORY</h1>
-    <p class="brand-tagline">Indie apps</p>
-  </aside>
+<body class="minirdp-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="site-brand" href="/" aria-label="ZAF Theory home"><svg viewBox="0 0 530 488" aria-hidden="true"><polygon fill="currentColor" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/><polygon fill="#f7f7f0" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/></svg><span>ZAF THEORY</span></a>
+<nav aria-label="Main navigation"><a href="/#games">Games</a><a href="/#apps">Apps</a><a href="/support.html">Support <span aria-hidden="true">↗</span></a></nav>
+</header>
 
-  <main class="product-page">
+  <main id="main" class="product-page">
     <header>
-      <a href="/" class="back-link">&larr; Back to all apps</a>
+      <a href="/" class="back-link">&larr; Back to apps &amp; games</a>
       <div class="badges-row">
         <span class="badge">macOS Menu Bar App • <span id="minirdp-mac-version">v1.0.2</span></span>
         <span class="badge">Windows Utility • <span id="minirdp-win-version">v1.4.2</span></span>
       </div>
-      <h2 class="lead" style="font-size: 32px; margin-bottom: 8px;">MiniRDP Client</h2>
+      <h1 class="lead">MiniRDP Client</h1>
       <p class="note" style="margin: 0;">A clean, high-performance Remote Desktop client for power users on Mac and Windows.</p>
     </header>
 
     <section>
-      <h3 class="caption">Screenshots</h3>
+      <h2 class="caption">Screenshots</h2>
       <ul class="shots">
         <li>
           <a href="assets/minirdp/tabbed-sessions.png"><img src="assets/minirdp/tabbed-sessions.png" alt="MiniRDP client showing tabbed remote sessions and connected terminal" loading="lazy"></a>
@@ -190,7 +50,7 @@
     </section>
 
     <section>
-      <h3 class="caption">Why MiniRDP</h3>
+      <h2 class="caption">Why MiniRDP</h2>
       <p>Standard Remote Desktop windows get messy fast when you manage multiple lab or server environments, and sessions disconnect when you step away. MiniRDP packages connections into clean tabs and keeps sessions alive with smart anti-idle (F15) and zero bloat.</p>
 
       <ul class="features">

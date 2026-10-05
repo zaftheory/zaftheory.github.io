@@ -7,172 +7,25 @@
   <meta name="description" content="Small macOS menu bar app that graphs CPU, GPU, memory pressure, disk, network, battery, and temperature, and shows whichever is busiest.">
   <meta name="theme-color" content="#246e4c">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    .product-page {
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-    }
-    .back-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 14px;
-      font-weight: 500;
-      transition: color 0.15s ease;
-      margin-bottom: 16px;
-    }
-    .back-link:hover {
-      color: var(--emerald);
-    }
-    .badge {
-      display: inline-block;
-      background: var(--emerald-tint);
-      color: var(--emerald-dark);
-      font-size: 13px;
-      font-weight: 600;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-    .features {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
-    .features li {
-      padding-left: 24px;
-      position: relative;
-    }
-    .features li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--emerald);
-      font-weight: bold;
-    }
-    .shots {
-      display: flex;
-      gap: 14px;
-      margin: 0;
-      padding: 4px 0 12px;
-      list-style: none;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-    }
-    .shots li {
-      flex: 0 0 240px;
-      scroll-snap-align: start;
-    }
-    .shots a {
-      display: block;
-    }
-    .shots img {
-      display: block;
-      width: 100%;
-      height: 430px;
-      object-fit: cover;
-      object-position: top;
-      border-radius: 8px;
-      border: 1px solid var(--emerald-border, #d2ded7);
-    }
-    .shots p {
-      margin: 8px 0 0;
-      font-size: 13px;
-      color: var(--text-muted);
-    }
-    .steps {
-      margin: 12px 0 0;
-      padding-left: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-    code {
-      font-size: 13px;
-      background: var(--emerald-tint);
-      padding: 2px 6px;
-      border-radius: 4px;
-      overflow-wrap: anywhere;
-    }
-    .download-box {
-      background: var(--emerald-tint);
-      border: 1px solid var(--emerald-border, #d2ded7);
-      padding: 20px 24px;
-      border-radius: 8px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .download-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .download-platform {
-      font-size: 17px;
-      font-weight: 600;
-      color: var(--text);
-    }
-    .download-meta {
-      font-size: 13px;
-      color: var(--text-muted);
-      line-height: 1.4;
-    }
-    .notice {
-      background: #fafafa;
-      border-left: 3px solid var(--text-muted);
-      padding: 14px 18px;
-      font-size: 14px;
-      color: var(--text-muted);
-      border-radius: 0 6px 6px 0;
-    }
-    .notice strong {
-      color: var(--text);
-    }
-    .notice code {
-      background: #efefef;
-    }
-    .disclaimer {
-      font-size: 12px;
-      color: var(--text-muted);
-      border-top: 1px solid #e5e5e5;
-      padding-top: 16px;
-      line-height: 1.6;
-    }
-  </style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <aside class="brand">
-    <svg class="brand-mark" viewBox="0 0 530 488" aria-hidden="true">
-      <polygon fill="#103524" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
-      <polygon fill="#ffffff" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
-    </svg>
-    <h1 class="brand-name">ZAF THEORY</h1>
-    <p class="brand-tagline">Indie apps</p>
-  </aside>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="site-brand" href="/" aria-label="ZAF Theory home"><svg viewBox="0 0 530 488" aria-hidden="true"><polygon fill="currentColor" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/><polygon fill="#f7f7f0" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/></svg><span>ZAF THEORY</span></a>
+<nav aria-label="Main navigation"><a href="/#games">Games</a><a href="/#apps">Apps</a><a href="/support.html">Support <span aria-hidden="true">↗</span></a></nav>
+</header>
 
-  <main class="product-page">
+  <main id="main" class="product-page">
     <header>
-      <a href="/" class="back-link">&larr; Back to all apps</a>
+      <a href="/" class="back-link">&larr; Back to apps &amp; games</a>
       <div><span class="badge">macOS Menu Bar App • <span id="flowstate-version">v1.1.2</span></span></div>
-      <h2 class="lead" style="font-size: 32px; margin-bottom: 8px;">FlowState</h2>
+      <h1 class="lead">FlowState</h1>
       <p class="note" style="margin: 0;">A small system monitor that lives in your menu bar and shows whatever is busiest right now.</p>
     </header>
 
     <section>
-      <h3 class="caption">Screenshots</h3>
+      <h2 class="caption">Screenshots</h2>
       <ul class="shots">
         <li>
           <a href="assets/flowstate/everyday-light.png"><img src="assets/flowstate/everyday-light.png" alt="FlowState dropdown on a quiet Mac, with two-minute graphs for CPU, GPU, memory, disk, network, battery, and temperature" loading="lazy"></a>
@@ -202,7 +55,7 @@
     </section>
 
     <section>
-      <h3 class="caption">Why FlowState</h3>
+      <h2 class="caption">Why FlowState</h2>
       <p>Most system monitors make you pick one number to watch. FlowState graphs CPU, GPU, memory pressure, disk, network, battery, and temperature, and puts whichever one is busiest in the menu bar. Click it for two-minute graphs of everything and the top processes.</p>
 
       <ul class="features">
@@ -227,17 +80,13 @@
     </div>
 
     <section>
-      <h3 class="caption">Install</h3>
+      <h2 class="caption">Install</h2>
       <ol class="steps">
         <li>Unzip and move <strong>FlowState.app</strong> to your Applications folder.</li>
         <li>Open it.</li>
       </ol>
       <p class="note">FlowState has no Dock icon or main window. Look for the graph in the menu bar; Settings and Quit are in its right-click menu, and launch at login is in Settings.</p>
     </section>
-
-    <div class="notice">
-      <strong>Hardware note:</strong> FlowState has only been run on the author's Mac. Sensors differ between chips, so on other hardware a metric (most likely temperature or GPU) may show as unavailable. Metrics a Mac doesn't have, such as battery on a desktop, are hidden.
-    </div>
 
     <footer class="disclaimer">
       <nav class="footer-links" style="margin-bottom: 12px;">
