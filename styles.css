@@ -93,6 +93,43 @@ h1,h2,h3,p {
   height:36px;
 }
 
+/* Iridescent reflections stay within the Z; the wordmark remains steady. */
+.site-brand .brand-hologram {
+  overflow:visible;
+  filter:drop-shadow(0 0 1px #4adbd540);
+}
+
+.brand-holo-mark {
+  transform-origin:265px 244px;
+  animation:brand-holo-float 7s ease-in-out infinite;
+}
+
+.brand-holo-face {
+  animation:brand-holo-color 9s linear infinite;
+}
+
+.brand-holo-reflection {
+  animation:brand-holo-reflect 5s ease-in-out infinite;
+}
+
+.brand-holo-fold {
+  fill:var(--bg);
+}
+
+@keyframes brand-holo-color {
+  to { filter:hue-rotate(360deg); }
+}
+
+@keyframes brand-holo-reflect {
+  0%,10% { transform:translateX(-650px); }
+  60%,100% { transform:translateX(650px); }
+}
+
+@keyframes brand-holo-float {
+  0%,100% { transform:skewY(-1deg) scale(1); }
+  50% { transform:skewY(1deg) scale(1.025); }
+}
+
 .site-brand span,.footer-wordmark {
   font-size:16px;
   font-weight:750;
@@ -1092,6 +1129,12 @@ footer p {
   }
   *,*::before,*::after {
     transition:none!important;
+  }
+  .brand-holo-mark,.brand-holo-face,.brand-holo-reflection {
+    animation:none;
+  }
+  .brand-holo-reflection {
+    display:none;
   }
 }
 

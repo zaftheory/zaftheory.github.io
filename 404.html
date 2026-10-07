@@ -10,7 +10,32 @@
 </head>
 <body class="notfound"><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
-<a class="site-brand" href="/" aria-label="ZAF Theory home"><svg viewBox="0 0 530 488" aria-hidden="true"><polygon fill="currentColor" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/><polygon fill="#f7f7f0" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/></svg><span>ZAF THEORY</span></a>
+<a class="site-brand" href="/" aria-label="ZAF Theory home"><svg class="brand-hologram" viewBox="0 0 530 488" aria-hidden="true">
+<defs>
+  <linearGradient id="brand-holo-color" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#68e2dc"/><stop offset=".18" stop-color="#7aa6e8"/>
+    <stop offset=".34" stop-color="#d7a8ee"/><stop offset=".49" stop-color="#f0bfd2"/>
+    <stop offset=".63" stop-color="#e9dfaa"/><stop offset=".79" stop-color="#90dbbe"/>
+    <stop offset="1" stop-color="#6dcde2"/>
+  </linearGradient>
+  <linearGradient id="brand-holo-light">
+    <stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="brand-holo-clip"><polygon points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/></clipPath>
+  <pattern id="brand-holo-lines" width="8" height="8" patternUnits="userSpaceOnUse">
+    <path d="M0 1H8" stroke="#263661" stroke-width="1.5"/>
+  </pattern>
+</defs>
+<g class="brand-holo-mark">
+  <polygon class="brand-holo-face" fill="url(#brand-holo-color)" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+  <g clip-path="url(#brand-holo-clip)">
+    <rect class="brand-holo-reflection" x="100" y="-100" width="180" height="700" fill="url(#brand-holo-light)"/>
+    <rect class="brand-holo-scanlines" width="530" height="488" fill="url(#brand-holo-lines)" opacity=".15"/>
+  </g>
+  <polygon class="brand-holo-fold" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
+</g>
+</svg><span>ZAF THEORY</span></a>
 <nav aria-label="Main navigation"><a href="/#games">Games</a><a href="/#apps">Apps</a><a href="/support.html">Support <span aria-hidden="true">↗</span></a>
 </nav>
 </header>
