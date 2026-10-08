@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PerchUI — ZAF Theory</title>
+  <meta name="description" content="Small macOS menu bar app that starts, stops and watches your ComfyUI server: queue, progress, memory, and model unloading.">
+  <meta name="theme-color" content="#1f6f80">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="site-brand" href="/" aria-label="ZAF Theory home"><svg class="brand-hologram" viewBox="0 0 530 488" aria-hidden="true">
+<defs>
+  <linearGradient id="brand-holo-color" x1="0" y1="0" x2="1" y2="1">
+    <stop stop-color="#68e2dc"/><stop offset=".18" stop-color="#7aa6e8"/>
+    <stop offset=".34" stop-color="#d7a8ee"/><stop offset=".49" stop-color="#f0bfd2"/>
+    <stop offset=".63" stop-color="#e9dfaa"/><stop offset=".79" stop-color="#90dbbe"/>
+    <stop offset="1" stop-color="#6dcde2"/>
+  </linearGradient>
+  <linearGradient id="brand-holo-light">
+    <stop stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".75"/>
+    <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <clipPath id="brand-holo-clip"><polygon points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/></clipPath>
+  <pattern id="brand-holo-lines" width="8" height="8" patternUnits="userSpaceOnUse">
+    <path d="M0 1H8" stroke="#263661" stroke-width="1.5"/>
+  </pattern>
+</defs>
+<g class="brand-holo-mark">
+  <polygon class="brand-holo-face" fill="url(#brand-holo-color)" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+  <g clip-path="url(#brand-holo-clip)">
+    <rect class="brand-holo-reflection" x="100" y="-100" width="180" height="700" fill="url(#brand-holo-light)"/>
+    <rect class="brand-holo-scanlines" width="530" height="488" fill="url(#brand-holo-lines)" opacity=".15"/>
+  </g>
+  <polygon class="brand-holo-fold" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
+</g>
+</svg><span>ZAF THEORY</span></a>
+<nav aria-label="Main navigation"><a href="/#games">Games</a><a href="/#apps">Apps</a><a href="/support.html">Support <span aria-hidden="true">↗</span></a></nav>
+</header>
+
+  <main id="main" class="product-page">
+    <header>
+      <a href="/" class="back-link">&larr; Back to apps &amp; games</a>
+      <div><span class="badge">macOS Menu Bar App • <span id="perchui-version">v1.5.0</span></span></div>
+      <h1 class="lead">PerchUI</h1>
+      <p class="note" style="margin: 0;">A menu bar companion for ComfyUI. Start it, watch it work, and free its memory when you're done.</p>
+    </header>
+
+    <!-- TODO before publishing: screenshots of the panel (light and dark), the menu bar while generating, and Settings.
+    <section>
+      <h2 class="caption">Screenshots</h2>
+      <ul class="shots">
+        <li>
+          <a href="assets/perchui/panel-light.png"><img src="assets/perchui/panel-light.png" alt="" loading="lazy"></a>
+          <p></p>
+        </li>
+      </ul>
+    </section>
+    -->
+
+    <section>
+      <h2 class="caption">Why PerchUI</h2>
+      <p>ComfyUI runs in a terminal window and a browser tab, and neither tells you much while you're doing something else. PerchUI sits in the menu bar instead: a songbird that's hollow while ComfyUI is stopped, solid while it's ready, and sparkles while it generates, with the progress of the current job beside it. Click it to start or stop the server, see the queue, and check how much memory ComfyUI is holding.</p>
+
+      <ul class="features">
+        <li><strong>One Switch:</strong> Start and stop ComfyUI from the menu bar, or have it start when PerchUI opens. If it crashes, PerchUI can restart it.</li>
+        <li><strong>Live Progress:</strong> The current step, time left, and how many jobs are waiting, right in the menu bar.</li>
+        <li><strong>Queue Controls:</strong> Interrupt the running job or clear the queue without opening the browser.</li>
+        <li><strong>Memory, Handled:</strong> See ComfyUI's share of your Mac's memory, unload its models in one click, or let PerchUI unload them after the queue has been idle for a while.</li>
+        <li><strong>Only Your Server:</strong> PerchUI only controls the ComfyUI running from your own folder, and leaves any other server on the port alone.</li>
+        <li><strong>Another Computer, Too:</strong> Watch the queue, progress and memory of ComfyUI running on another Mac or PC on your network.</li>
+        <li><strong>Stays Out of the Way:</strong> No Dock icon, notifications only when ComfyUI is ready, a queue finishes or something goes wrong, and no data collected.</li>
+      </ul>
+    </section>
+
+    <div class="download-box">
+      <div class="download-header">
+        <div class="download-platform">macOS</div>
+        <div>
+          <a id="perchui-download" class="btn" href="https://github.com/zaftheory/zaftheory.github.io/releases/download/perchui-latest/PerchUI-1.5.0.zip">Download for Mac (.zip)</a>
+        </div>
+      </div>
+      <div class="download-meta">
+        macOS 26 or later • Apple silicon • Free • Requires ComfyUI • About in Settings tells you when a new version is out: download the latest zip and replace the app, your settings are kept
+      </div>
+    </div>
+
+    <section>
+      <h2 class="caption">Install</h2>
+      <ol class="steps">
+        <li>Unzip and move <strong>PerchUI.app</strong> to your Applications folder.</li>
+        <li>Open it. The songbird appears in the menu bar.</li>
+        <li>If your ComfyUI isn't in <strong>~/ComfyUI</strong>, click the songbird and choose your ComfyUI folder, the one that contains <strong>main.py</strong>.</li>
+      </ol>
+      <p class="note">PerchUI has no Dock icon or main window. Click the songbird for the panel; Settings (⌘,) has open at login, the server's port and folder, and ComfyUI on another computer. If ComfyUI starts with a <strong>start-comfy.command</strong> script in its folder, PerchUI uses it; otherwise it finds ComfyUI's Python environment.</p>
+    </section>
+
+    <section>
+      <h2 class="caption">Privacy</h2>
+      <p>PerchUI talks only to your ComfyUI server. When you open About in Settings, it loads this page to compare versions, and sends nothing else. It collects nothing.</p>
+    </section>
+
+    <footer class="disclaimer">
+      <nav class="footer-links" style="margin-bottom: 12px;">
+        <a href="/">Home</a>
+        <span class="sep">&bull;</span>
+        <a href="/privacy.html">Privacy</a>
+        <span class="sep">&bull;</span>
+        <a href="/support.html">Support</a>
+        <span class="sep">&bull;</span>
+        <a href="/terms.html">Terms</a>
+      </nav>
+      <p><strong>Disclaimer & License:</strong> PerchUI is free to use and provided by ZAF Theory LLC "AS IS", without warranty of any kind, express or implied. See LICENSE.txt in the download. PerchUI isn't affiliated with ComfyUI.</p>
+      <p style="margin-top: 6px;">&copy; 2026 ZAF Theory LLC. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>
