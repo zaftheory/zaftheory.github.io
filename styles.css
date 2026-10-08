@@ -438,6 +438,10 @@ main {
   background:#e0e8e2;
 }
 
+.perch-preview {
+  background:#e0e6ea;
+}
+
 .app-preview img {
   max-height:100%;
   object-fit:contain;
