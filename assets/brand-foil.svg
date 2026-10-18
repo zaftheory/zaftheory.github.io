@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="530" height="488" viewBox="0 0 530 488" role="img" aria-labelledby="brand-title">
+  <title id="brand-title">ZAF Theory</title>
+  <style>
+    .foil-sheen {
+      opacity:0;
+      transform:translateX(-650px) rotate(-22deg);
+      transform-origin:265px 244px;
+      animation:foil-sheen 11s ease-in-out infinite;
+    }
+    @keyframes foil-sheen {
+      0%,35% { transform:translateX(-650px) rotate(-22deg); opacity:0; }
+      43%,61% { opacity:.75; }
+      69%,100% { transform:translateX(800px) rotate(-22deg); opacity:0; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .foil-sheen { animation:none; display:none; }
+    }
+    @media print {
+      .foil-sheen { animation:none; display:none; }
+    }
+  </style>
+  <defs>
+    <linearGradient id="foil-color" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#68e2dc"/>
+      <stop offset=".22" stop-color="#7aa6e8"/>
+      <stop offset=".43" stop-color="#d7a8ee"/>
+      <stop offset=".6" stop-color="#f0bfd2"/>
+      <stop offset=".8" stop-color="#90dbbe"/>
+      <stop offset="1" stop-color="#6dcde2"/>
+    </linearGradient>
+    <linearGradient id="foil-facets" x1="0" y1="1" x2="1" y2="0">
+      <stop stop-color="#fff" stop-opacity=".04"/>
+      <stop offset=".19" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".25" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset=".29" stop-color="#fff" stop-opacity=".04"/>
+      <stop offset=".41" stop-color="#263b58" stop-opacity=".18"/>
+      <stop offset=".47" stop-color="#fff" stop-opacity=".02"/>
+      <stop offset=".59" stop-color="#fff" stop-opacity=".04"/>
+      <stop offset=".63" stop-color="#fff" stop-opacity=".65"/>
+      <stop offset=".68" stop-color="#fff" stop-opacity=".03"/>
+      <stop offset=".81" stop-color="#244936" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#fff" stop-opacity=".14"/>
+    </linearGradient>
+    <linearGradient id="foil-light">
+      <stop stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".38" stop-color="#fff" stop-opacity=".12"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".85"/>
+      <stop offset=".62" stop-color="#fff" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="foil-clip">
+      <polygon points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+    </clipPath>
+  </defs>
+  <polygon fill="url(#foil-color)" points="109,8 453,8 424,72 519,72 305,347 469,347 503,337 419,480 73,480 103,416 10,416 223,141 54,140 25,150"/>
+  <g clip-path="url(#foil-clip)">
+    <rect width="530" height="488" fill="url(#foil-facets)"/>
+    <polygon fill="#245541" opacity=".16" points="71,139 453,8 283,347 453,348 227,430 75,479 81,461 243,141"/>
+    <rect class="foil-sheen" x="0" y="-250" width="180" height="1000" fill="url(#foil-light)"/>
+  </g>
+</svg>
